@@ -1,23 +1,44 @@
 import "../login/../../css/login.css";
 import image4 from "../../images/screenshot4.png";
-import image2 from "../../images/screenshot3.png";
 import googlePlay from "../../images/logos/BFthdeAc5KC.png";
 import appPlay from "../../images/logos/XUCupIzGmzB.png";
 import instTextLogo from "../../images/logos/ins-text-logo.png";
 import facebookLogo from "../../images/logos/facebook-logo.png";
 import { useTranslation } from "react-i18next";
 import { Container, Grid, TextField, Button, List } from "@mui/material";
-import i18n from "../../i18n/i18n"
+import i18n from "../../i18n/i18n";
+import { useState } from "react";
+import * as dto from "../../dto/Login";
+import axios from "axios";
+
 export default function Login() {
   const { t } = useTranslation();
+  const [userInfo, setUserInfo] = useState("");
+  const [password, setPassword] = useState("");
+  const [token, setToken] = useState();
 
   const changeLanguages = () => {
-    i18n.changeLanguage(i18n.language === "tr" ? "en" : "tr")
-  }
+    i18n.changeLanguage(i18n.language === "tr" ? "en" : "tr");
+  };
+
+  const handleLogin = async () => {
+    const data: dto.LoginDto = {
+      email: userInfo,
+      password: password,
+    };
+    setToken(await authenticate(data))
+  };
+
+  const authenticate = async (data: dto.LoginDto) => {
+    const response = await axios.post(
+      "http://localhost:8082/login/authenticate",
+      data
+    );
+    return response.data.token;
+  };
 
   return (
     <div>
-      <h1>{t("login.welcome")}</h1>
       <Container className="login-container">
         <Grid
           container
@@ -44,15 +65,21 @@ export default function Login() {
                   className="login-input"
                   size="small"
                   placeholder={t("login.input-id")}
+                  onChange={(e) => setUserInfo(e.target.value)}
                 ></TextField>
 
                 <TextField
                   className="login-input"
                   size="small"
                   placeholder={t("login.input-pass")}
+                  onChange={(e) => setPassword(e.target.value)}
                 ></TextField>
 
-                <Button variant="contained" className="login-button">
+                <Button
+                  variant="contained"
+                  className="login-button"
+                  onClick={() => handleLogin()}
+                >
                   {t("login.login")}
                 </Button>
                 <div className="or-line">
@@ -107,7 +134,9 @@ export default function Login() {
           <a href="#">{t("login.verified")}</a>
         </List>
         <List className="footer">
-          <a href="#" onClick={() => changeLanguages()}>{i18n.language === "tr" ? "Türkçe" : "English"}</a>
+          <a href="#" onClick={() => changeLanguages()}>
+            {i18n.language === "tr" ? "English" : "Türkçe"}
+          </a>
           <a href="#">©2023 Instagram from Meta</a>
         </List>
       </Grid>
