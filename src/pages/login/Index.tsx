@@ -8,13 +8,7 @@ export default function Index() {
   return (
     <div>
       <Container className="login-container">
-        <Grid
-          container
-          spacing={2}
-          columns={16}
-          textAlign={"center"}
-          justifyContent={"center"}
-        >
+        <Grid container className="login-container-grid">
           <Grid item xs={8} className="login-fotos">
             <img className="image1" src={image4}></img>
             <img className="image2" src={image4}></img>
