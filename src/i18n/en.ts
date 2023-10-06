@@ -31,5 +31,5 @@ export default{
        "input-emty-error" : "Phone number, username or email don't empty",
        "login-error" : "Username or password is wrong..."
     }
-   
+
   }}

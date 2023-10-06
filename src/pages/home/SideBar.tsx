@@ -1,26 +1,34 @@
 import { Grid } from "@mui/material";
 import "../../css/home.css";
 import * as item from "../../datas/sidebarItem";
+import { Outlet } from "react-router-dom";
 export default function SideBar() {
   return (
-    <Grid item xs={2} className="sidebar-container">
-      <div className="sidebar">
-        <item.instagramLogo />
-        <div>
-          <item.homepage />
-          <item.search />
-          <item.explore />
-          <item.reels />
-          <item.message />
-          <item.notifications />
-          <item.create />
-          <item.profile />
+    <Grid container className="home-container">
+      <Grid item xs={2} className="sidebar-container">
+        <div className="sidebar">
+          <item.instagramLogo />
+          <div>
+            <item.homepage />
+            <item.search />
+            <item.explore />
+            <item.reels />
+            <item.message />
+            <item.notifications />
+            <item.create />
+            <item.profile />
+          </div>
+          <div className="sidebar-footer">
+            <item.threads />
+            <item.more />
+          </div>
         </div>
-        <div className="sidebar-footer">
-          <item.threads />
-          <item.more />
+      </Grid>
+      <Grid item xs={10} >
+        <div id="detail">
+          <Outlet />
         </div>
-      </div>
+      </Grid>
     </Grid>
   );
 }
