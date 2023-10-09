@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-
+//burada ki css class isimleri : sidebar-logo , sidebar-item
 export const instagramLogo = () => {
   return (
     <div>
       <Link to={""}>
-        <div className="logo">
+        <div className="sidebar-logo">
           <svg
             color="rgb(245, 245, 245)"
             height="29"
@@ -25,7 +25,7 @@ export const instagramLogo = () => {
 export const homepage = () => {
   return (
     <Link to={""}>
-      <div className="item">
+      <div className="sidebar-item">
         <svg
           color="rgb(245, 245, 245)"
           fill="rgb(245, 245, 245)"
@@ -45,7 +45,7 @@ export const homepage = () => {
 export const search = () => {
   return (
     <Link to={""}>
-      <div className="item">
+      <div className="sidebar-item">
         <svg
           color="rgb(245, 245, 245)"
           fill="rgb(245, 245, 245)"
@@ -83,7 +83,7 @@ export const search = () => {
 export const explore = () => {
   return (
     <Link to={"/explore"}>
-      <div className="item">
+      <div className="sidebar-item">
         <svg
           color="rgb(245, 245, 245)"
           fill="rgb(245, 245, 245)"
@@ -124,7 +124,7 @@ export const explore = () => {
 export const reels = () => {
   return (
     <Link to={""}>
-      <div className="item">
+      <div className="sidebar-item">
         <svg
           color="rgb(245, 245, 245)"
           fill="rgb(245, 245, 245)"
@@ -187,7 +187,7 @@ export const reels = () => {
 export const message = () => {
   return (
     <Link to={""}>
-      <div className="item">
+      <div className="sidebar-item">
         <svg
           color="rgb(245, 245, 245)"
           fill="rgb(245, 245, 245)"
@@ -217,7 +217,7 @@ export const message = () => {
 export const notifications = () => {
   return (
     <Link to={""}>
-      <div className="item">
+      <div className="sidebar-item">
         <svg
           color="rgb(245, 245, 245)"
           fill="rgb(245, 245, 245)"
@@ -237,7 +237,7 @@ export const notifications = () => {
 export const create = () => {
   return (
     <Link to={""}>
-      <div className="item">
+      <div className="sidebar-item">
         <svg
           color="rgb(245, 245, 245)"
           fill="rgb(245, 245, 245)"
@@ -286,7 +286,7 @@ export const create = () => {
 export const profile = () => {
   return (
     <Link to={""}>
-      <div className="item">
+      <div className="sidebar-item">
         <a>Profil</a>
       </div>
     </Link>
@@ -296,7 +296,7 @@ export const profile = () => {
 export const threads = () => {
   return (
     <Link to={""}>
-      <div className="item">
+      <div className="sidebar-item">
         <svg
           color="rgb(245, 245, 245)"
           fill="rgb(245, 245, 245)"
@@ -331,7 +331,7 @@ export const threads = () => {
 export const more = () => {
   return (
     <Link to={""}>
-      <div className="item">
+      <div className="sidebar-item">
         <svg
           color="rgb(245, 245, 245)"
           fill="rgb(245, 245, 245)"

@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import "../../css/home.css";
+import "../../css/sidebar.css";
 import * as item from "../../datas/sidebarItem";
 import { Outlet } from "react-router-dom";
 export default function SideBar() {

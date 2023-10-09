@@ -4,7 +4,6 @@ import Explore from "../pages/explore/Index";
 import Login from "../pages/login/Index";
 import Register from "../pages/register/Index";
 import HomePage from "../pages/home/HomePage";
-import Home from "../pages/home/Index";
 export const router = createBrowserRouter([
   {
     path: "/login",
