@@ -42,12 +42,21 @@
   width: 500px;
   height: 600px;
   margin-top: 10px;
-  margin-bottom: 10px;
   border: 1px solid var(--border-color-trans);
 }
 
 .post-options{
   display: flex;
   justify-content: space-between;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
+.post-item{
+  padding: 8px;
+}
+
+.comments{
+  text-decoration: none;
+  color: var(--border-color);
+}
