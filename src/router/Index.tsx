@@ -4,6 +4,10 @@ import Explore from "../pages/explore/Index";
 import Login from "../pages/login/Index";
 import Register from "../pages/register/Index";
 import HomePage from "../pages/home/HomePage";
+import Profile from "../pages/profile/Profile";
+import Posts from "../pages/profile/Posts";
+import Saved from "../pages/profile/Saved";
+import Tagged from "../pages/profile/Tagged";
 export const router = createBrowserRouter([
   {
     path: "/login",
@@ -24,6 +28,24 @@ export const router = createBrowserRouter([
       {
         path: "explore",
         element: <Explore />,
+      },
+      {
+        path: "profile",
+        element: <Profile />,
+        children: [
+          {
+            path: "",
+            element: <Posts />,
+          },
+          {
+            path: "saved",
+            element: <Saved />,
+          },
+          {
+            path: "tagged",
+            element: <Tagged />,
+          },
+        ],
       },
     ],
   },

@@ -285,7 +285,7 @@ export const create = () => {
 
 export const profile = () => {
   return (
-    <Link to={""}>
+    <Link to={"/profile"}>
       <div className="sidebar-item">
         <a>Profil</a>
       </div>
