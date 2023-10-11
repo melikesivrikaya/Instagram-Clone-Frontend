@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const like = () => {
   return (
     <svg
@@ -19,7 +21,7 @@ export const like = () => {
 export const comment = () => {
   return (
     <svg
-    className="post-item"
+      className="post-item"
       color="rgb(245, 245, 245)"
       fill="rgb(245, 245, 245)"
       height="24"
@@ -42,7 +44,7 @@ export const comment = () => {
 export const share = () => {
   return (
     <svg
-    className="post-item"
+      className="post-item"
       color="rgb(245, 245, 245)"
       fill="rgb(245, 245, 245)"
       height="24"
@@ -75,7 +77,7 @@ export const share = () => {
 export const save = () => {
   return (
     <svg
-    className="post-item"
+      className="post-item"
       color="rgb(245, 245, 245)"
       fill="rgb(245, 245, 245)"
       height="24"
@@ -110,5 +112,42 @@ export const more = () => {
       <circle cx="6" cy="12" r="1.5"></circle>
       <circle cx="18" cy="12" r="1.5"></circle>
     </svg>
+  );
+};
+
+export const exit = () => {
+  return (
+    <Link to={"/profile/post"}>
+    <svg
+      aria-label="Kapat"
+      color="rgb(255, 255, 255)"
+      fill="rgb(255, 255, 255)"
+      height="18"
+      role="img"
+      viewBox="0 0 24 24"
+      width="18"
+    >
+      <title>Kapat</title>
+      <polyline
+        fill="none"
+        points="20.643 3.357 12 12 3.353 20.647"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="3"
+      ></polyline>
+      <line
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="3"
+        x1="20.649"
+        x2="3.354"
+        y1="20.649"
+        y2="3.354"
+      ></line>
+    </svg>
+    </Link>
   );
 };

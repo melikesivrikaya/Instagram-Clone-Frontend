@@ -77,7 +77,7 @@ export default function Profile() {
         <div className="profile-opcions-container">
           <Link
             className={`profile-opcions  ${tabPosts}`}
-            to={""}
+            to={"post"}
             onClick={() => {
               setTabTagged(""), setTabPosts(border), setTabSaved("");
             }}

@@ -8,6 +8,7 @@ import Profile from "../pages/profile/Profile";
 import Posts from "../pages/profile/Posts";
 import Saved from "../pages/profile/Saved";
 import Tagged from "../pages/profile/Tagged";
+import PostDetail from "../pages/profile/PostDetail";
 export const router = createBrowserRouter([
   {
     path: "/login",
@@ -34,9 +35,16 @@ export const router = createBrowserRouter([
         element: <Profile />,
         children: [
           {
-            path: "",
+            path: "post",
             element: <Posts />,
+            children: [
+              {
+                path: ":postId",
+                element: <PostDetail />,
+              },
+            ],
           },
+
           {
             path: "saved",
             element: <Saved />,
