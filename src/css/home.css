@@ -113,3 +113,47 @@
   background-color: black;
   color: white;
 }
+
+.homepage-container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.friendbar-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  margin-right: 10px;
+}
+
+.friends-bar-container{
+  color: white;
+  padding-top: 40px;
+  max-width: 300px;
+  padding-left: 80px;
+}
+
+.friends-bar-header{
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.friends-bar-middle{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.friends{
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.friends-follow {
+  color: var(--blue-open);
+  text-decoration: none;
+}

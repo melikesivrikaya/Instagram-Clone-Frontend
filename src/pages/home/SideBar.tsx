@@ -25,7 +25,7 @@ export default function SideBar() {
         </div>
       </Grid>
       <Grid item xs={10} >
-        <div id="detail">
+        <div  className="homepage-container">
           <Outlet />
         </div>
       </Grid>

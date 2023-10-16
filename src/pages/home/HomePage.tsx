@@ -7,11 +7,11 @@ import "../../css/home.css"
 export default function HomePage() {
   return (
     <Grid container>
-      <Grid item xs={8}>
+      <Grid item xs={7}>
         <Storys />
         <Posts />
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={5}>
         <FriendsBar/>
       </Grid>
     </Grid>
