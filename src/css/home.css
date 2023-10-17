@@ -98,8 +98,7 @@
   left: 0;
   bottom: 0;
   backdrop-filter: brightness(0.5);
-  margin-top: 10%;
-  margin-bottom: 10%;
+  min-width: 100%;
 }
 
 .post-details-photo {
@@ -156,4 +155,21 @@
 .friends-follow {
   color: var(--blue-open);
   text-decoration: none;
+}
+
+.friends-bar-footer{
+  margin-top : 40px ; 
+}
+
+.friends-bar-footer a{
+  color: gray;
+  text-decoration: none;
+}
+
+.canvas{
+  left: -5px;
+  position: absolute;
+  top: -5px;
+  height: 66px;
+  width: 66px;
 }

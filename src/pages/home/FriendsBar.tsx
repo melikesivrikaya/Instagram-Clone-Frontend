@@ -3,7 +3,6 @@ import { AppDispatch, RootState } from "../../store/Store";
 import { useEffect } from "react";
 import * as dto from "../../dto/User";
 import { fetchUserListWitoutBeFriend } from "../../slice/UserListSlice";
-
 export default function FriendsBar() {
   const dispatch = useDispatch<AppDispatch>();
   const userlist = useSelector((state: RootState) => state.userList.data);
@@ -56,6 +55,22 @@ export default function FriendsBar() {
           </div>
         </div>
       ))}
+      <div className="friends-bar-footer">
+        <a href="#">Hakkında . </a>
+        <a href="#">Yardım . </a>
+        <a href="#">Basın . </a>
+        <a href="#">API . </a>
+        <a href="#">İş Fırsatları . </a>
+        <a href="#">Gizlilik . </a>
+        <a href="#">Koşullar . </a>
+        <a href="#">Konumlar . </a>
+        <a href="#">Dil . </a>
+        <a href="#">Meta Verified . </a>
+        <br></br>
+        <div style={{ marginTop: 15 }}>
+          <a>© 2023 INSTAGRAM FROM META</a>
+        </div>
+      </div>
     </div>
   );
 }
